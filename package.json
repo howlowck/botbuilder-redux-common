@@ -1,0 +1,45 @@
+{
+  "name": "botbuilder-redux-common",
+  "version": "0.1.0",
+  "description": "A set of middlewares and helper function to help you quickly build a bot with the Bot Redux Middleware",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "scripts": {
+    "devtoolbot": "nodemon build/examples/devToolBot/bot",
+    "convoBot": "nodemon build/examples/convoBot/bot",
+    "build": "tsc",
+    "build:dev": "tsc --p tsconfig.example.json",
+    "build:dev:watch": "tsc --p tsconfig.example.json -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "botbuilder-redux": "~1.0.0",
+    "botbuilder-core": "^4.0.0-h3.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.86",
+    "@types/node-fetch": "^1.6.7",
+    "@types/ramda": "^0.25.6",
+    "@types/restify": "^5.0.6",
+    "botbuilder-ai": "^4.0.0-h3.4",
+    "botbuilder-core": "^4.0.0-h3.4",
+    "botbuilder-redux": "^1.0.0",
+    "botbuilder-services": "^4.0.0-h3.5",
+    "dotenv": "^4.0.0",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3",
+    "ramda": "^0.25.0",
+    "redux": "^3.7.2",
+    "remote-redux-devtools": "^0.5.0",
+    "remotedev-server": "^0.2.4",
+    "restify": "^6.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://haoluo12.visualstudio.com/botbuilder-redux-common"
+  },
+  "keywords": [],
+  "author": "Hao Luo",
+  "license": "MIT",
+  "dependencies": {}
+}
