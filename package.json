@@ -1,6 +1,6 @@
 {
   "name": "botbuilder-redux-common",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of middlewares and helper function to help you quickly build a bot with the Bot Redux Middleware",
   "main": "dist/index",
   "typings": "dist/index",

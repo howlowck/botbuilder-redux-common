@@ -22,9 +22,9 @@ class IncomingMessageReduxMiddleware<S> implements Middleware {
 
   receiveActivity (context: BotContext) {
     this.getStore(context).dispatch({type: 'CLEAR_RESPONSES'})
-    this.getStore(context).dispatch({type: 'INCOMING_MESSAGE', data: context.request.text})
+    this.getStore(context).dispatch({type: 'INCOMING_MESSAGE', data: context.request.text || null})
     if (context.topIntent) {
-      this.getStore(context).dispatch({type: 'INCOMING_INTENT', data: context.topIntent})
+      this.getStore(context).dispatch({type: 'INCOMING_INTENT', data: context.topIntent || null})
     }
   }
 }
