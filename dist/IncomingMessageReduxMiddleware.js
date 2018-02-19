@@ -14,12 +14,16 @@
         constructor(getStore = defaultGetStore) {
             this.getStore = getStore;
         }
-        receiveActivity(context) {
-            this.getStore(context).dispatch({ type: 'CLEAR_RESPONSES' });
-            this.getStore(context).dispatch({ type: 'INCOMING_MESSAGE', data: context.request.text });
-            if (context.topIntent) {
-                this.getStore(context).dispatch({ type: 'INCOMING_INTENT', data: context.topIntent });
+        receiveActivity(context, next) {
+            if (context.request.type !== 'message') {
+                return next();
             }
+            this.getStore(context).dispatch({ type: 'CLEAR_RESPONSES' });
+            this.getStore(context).dispatch({ type: 'INCOMING_MESSAGE', data: context.request.text || null });
+            if (context.topIntent) {
+                this.getStore(context).dispatch({ type: 'INCOMING_INTENT', data: context.topIntent || null });
+            }
+            return next();
         }
     }
     exports.default = IncomingMessageReduxMiddleware;

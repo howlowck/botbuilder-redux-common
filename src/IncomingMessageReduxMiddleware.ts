@@ -1,5 +1,5 @@
 import { Store as ReduxStore } from 'redux'
-import { Middleware } from 'botbuilder-core'
+import { Middleware } from 'botbuilder'
 
 declare global {
   export interface BotContext {
@@ -20,12 +20,16 @@ class IncomingMessageReduxMiddleware<S> implements Middleware {
     this.getStore = getStore
   }
 
-  receiveActivity (context: BotContext) {
+  receiveActivity (context: BotContext, next: () => Promise<void>) {
+    if (context.request.type !== 'message') {
+      return next()
+    }
     this.getStore(context).dispatch({type: 'CLEAR_RESPONSES'})
     this.getStore(context).dispatch({type: 'INCOMING_MESSAGE', data: context.request.text || null})
     if (context.topIntent) {
       this.getStore(context).dispatch({type: 'INCOMING_INTENT', data: context.topIntent || null})
     }
+    return next()
   }
 }
 

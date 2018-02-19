@@ -4,12 +4,11 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "botbuilder-core", "./IncomingMessageReduxMiddleware"], factory);
+        define(["require", "exports", "./IncomingMessageReduxMiddleware"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    require("botbuilder-core"); // for BotContext
     const IncomingMessageReduxMiddleware_1 = require("./IncomingMessageReduxMiddleware");
     exports.IncomingMessageReduxMiddleware = IncomingMessageReduxMiddleware_1.default;
     function defaultRenderer(ctx, store) {

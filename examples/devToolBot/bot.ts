@@ -1,4 +1,4 @@
-import { Bot, MemoryStorage } from 'botbuilder-core'
+import { Bot, MemoryStorage } from 'botbuilder'
 import { BotFrameworkAdapter } from 'botbuilder-services'
 import { get } from 'lodash'
 import { IncomingMessageReduxMiddleware, defaultRenderer } from '../../src'

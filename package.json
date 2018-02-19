@@ -13,30 +13,50 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "botbuilder-redux": "~1.0.0",
-    "botbuilder-core": "^4.0.0-h3.3"
+    "botbuilder-redux": "~1.1.0",
+    "botbuilder": "^4.0.0-m1.4"
   },
   "devDependencies": {
+    "@types/jest": "^21.1.8",
     "@types/lodash": "^4.14.86",
     "@types/node-fetch": "^1.6.7",
     "@types/ramda": "^0.25.6",
     "@types/restify": "^5.0.6",
-    "botbuilder-ai": "^4.0.0-h3.4",
-    "botbuilder-core": "^4.0.0-h3.4",
-    "botbuilder-redux": "^1.0.0",
-    "botbuilder-services": "^4.0.0-h3.5",
+    "botbuilder-ai": "^4.0.0-m1.2",
+    "botbuilder": "^4.0.0-m1.4",
+    "botbuilder-redux": "^1.1.0",
+    "botbuilder-services": "^4.0.0-m1.2",
     "dotenv": "^4.0.0",
+    "jest": "^21.2.1",
     "lodash": "^4.17.4",
     "node-fetch": "^1.7.3",
     "ramda": "^0.25.0",
     "redux": "^3.7.2",
     "remote-redux-devtools": "^0.5.0",
     "remotedev-server": "^0.2.4",
-    "restify": "^6.3.2"
+    "restify": "^6.3.2",
+    "rxjs": "^5.5.5",
+    "ts-jest": "^21.2.4",
+    "typescript": "^2.6.2",
+    "validator": "^9.2.0"
   },
   "repository": {
     "type": "git",
     "url": "https://haoluo12.visualstudio.com/botbuilder-redux-common"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "keywords": [],
   "author": "Hao Luo",
