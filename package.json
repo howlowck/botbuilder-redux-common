@@ -1,12 +1,11 @@
 {
   "name": "botbuilder-redux-common",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A set of middlewares and helper function to help you quickly build a bot with the Bot Redux Middleware",
   "main": "dist/index",
   "typings": "dist/index",
   "scripts": {
     "devtoolbot": "nodemon build/examples/devToolBot/bot",
-    "convoBot": "nodemon build/examples/convoBot/bot",
     "build": "tsc",
     "build:dev": "tsc --p tsconfig.example.json",
     "build:dev:watch": "tsc --p tsconfig.example.json -w",

@@ -1,6 +1,6 @@
 # Botbuilder Redux Common Package
 
-[Botbuilder Redux Middleware](https://haoluo12.visualstudio.com/botbuilder-redux) gives us an easy way to hook the simple yet powerful Redux store to our bot.
+[Botbuilder Redux Middleware](https://github.com/howlowck/botbuilder-redux) gives us an easy way to hook the simple yet powerful Redux store to our bot.
 
 This common package is a repository of common interpretations of the state in which you can utilize and start developing your bot quickly.  While the `BotReduxMiddleware` is a thin, unopinionated Bot Middleware.  This package provides more opinions and convention to help bot developers get started quickly.
 
